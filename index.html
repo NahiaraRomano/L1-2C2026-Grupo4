@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azuria</title>
+    <meta name="descripcion" content="Descubrí Azuria, una ciudad costera donde la naturaleza, la cultura y la vida urbana se encuentran frente al Mar Azul">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
-        <img src="imagenes/logoAzuria.png" alt="logo de Azuria" width="300">
+        <img src="imagenes/logoAzuria.png" alt="logo de Azuria" width="300" id="logoAzuria">
         <nav aria-label="Menú principal" class="navbar">
             <ul>
-               <li><a href="index.html" >Inicio</a></li>
-               <li><a href="ciudad.html">Ciudad</a></li>
-               <li><a href="turismo.html">Turismo</a></li>
-               <li><a href="contacto.html">Contacto</a></li>
+               <li><a href="index.html"  target="_blank" rel="noopener noferrer">Inicio</a></li>
+               <li><a href="ciudad.html" target="_blank" rel="noopener noferrer">Ciudad</a></li>
+               <li><a href="Lugares.html" target="_blank" rel="noopener noferrer">Turismo</a></li>
+               <li><a href="contacto.html"  target="_blank" rel="noopener noferrer">Contacto</a></li>
         </ul>
         </nav>
     </header>
     <main>
         <!-- PRESENTACION -->
-        <section class="hero-section">
-            
+        <section class="hero-section">  
             <h1>Azuria</h1>
             <p>Entre el mar y la ciudad</p>
-            <p>Azuria es una ciudad costera donde la naturaleza,
-                la cultura y la vida urbana se encuentran ubicadas
-                frente al Mar Azul. Ofrece paisajes únicos, espacios culturales y actividades al aire libre
+            <p>Azuria es una ciudad costera donde la naturaleza,la cultura y la vida urbana se encuentran ubicadas
+              frente al Mar Azul. Ofrece paisajes únicos, espaciosculturales y actividades al aire libre
             </p>
         </section>
 
       <!-- ¿QUE HACE ESPECIAL A AZURIA? -->
-        <section>
+        <section class="cards-container">
            <h2>¿QUÉ HACE ESPECIAL A AZURIA?</h2>
 
            <article class="card">
@@ -53,9 +56,10 @@
              <h3>Vida Urbana</h3>
              <p>Conciertos, ferias, festivales y actividades para todos los gustos.</p>
           </article>
+
         </section>
 
-        <section>
+        <section class="lugares-destacados">
           <h2>Lugares Destacados</h2>
           <article>
             <img src="imagenes/costaAzul.jpeg" alt="Mar Costa Azul " width="200" loading="lazy">
@@ -63,7 +67,6 @@
             <h3>Costa Azul</h3>
             <p>El principal paseo marítimo de Azuria. Ofrece amplias playas de arena clara,
              gastronomía frente al mar y un extenso circuito para caminatas al atardecer.</p>
-            <a href="#">Conocer Más</a>
             </div>
           </article>
           
@@ -73,7 +76,6 @@
             <h3>Distrito Coral</h3>
             <p>Descubra el Distrito Coral, el corazón artístico y vibrante de Azuria. Camine entre maravillas arquitectónicas inspiradas en el océano,
               donde la creatividad local florece junto a vistas panorámicas de nuestra costa única. Un viaje para los sentidos.</p>
-            <a href="#">Conocer Más</a>
             </div>
           </article>
 
@@ -84,10 +86,9 @@
             <p>Sumérjase en la rica historia del Casco Antiguo de Azuria. 
               Recorra sus estrechas y pintorescas calles adoquinadas, admire la imponente arquitectura medieval y déjese cautivar por el encanto atemporal de nuestros monumentos más emblemáticos. 
               Donde cada rincón cuenta una historia.</p>
-            <a href="#">Conocer Más</a>
             </div>
           </article>
-
+          <a href="Lugares.html" class="boton"target="_blank" rel="noopener noferrer">Conocer Más</a>
         </section>
   
 
@@ -95,9 +96,9 @@
     <footer>
      <nav aria-label="Menú del pie de página"> 
        <ul>
-        <li><a href="https://www.instagram.com" target="_blank" ><img src="imagenes/instagram.svg" alt="Instagram de Azuria" width="24"></a></li>
-        <li><a href="https://www.Facebook.com" target="_blank"><img src="imagenes/facebook.svg" alt="Facebook de Azuria" width="24"></a></li>
-        <li><a href="https://www.Tiktok.com" target="_blank"><img src="imagenes/tiktok.svg" alt="TikTok de Azuria" width="24"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noferrer" ><img src="imagenes/instagram.svg" alt="Instagram de Azuria" width="24"></a></li>
+        <li><a href="https://www.Facebook.com" target="_blank" rel="noopener noferrer"><img src="imagenes/facebook.svg" alt="Facebook de Azuria" width="24"></a></li>
+        <li><a href="https://www.Tiktok.com" target="_blank" rel="noopener noferrer"><img src="imagenes/tiktok.svg" alt="TikTok de Azuria" width="24"></a></li>
        </ul>      
             
      </nav>
