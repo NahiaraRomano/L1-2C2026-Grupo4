@@ -1,0 +1,222 @@
+/*============================
+   VARIABLES
+ =============================*/
+:root {
+  
+    --blanco: #FFFFFF;
+    --Azul-oscuro: #020120;
+    --celeste:#afccf8;
+    --crema:#f5f5dc;
+    
+}
+/*============================
+    RESET
+==============================
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body-index {
+    background-color: var(--crema);
+    color: var(--Azul-oscuro);
+    font-size:16px;
+    line-height:1.6;
+    font-family: "poppins", sans-serif;
+    margin:0 ;
+    padding:0;
+
+}
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+============================
+HEADER
+===============================
+*/
+
+#logoAzuria{
+  display:flex;
+  justify-content:start;
+  width: 180px;
+  height:auto;
+}
+header{
+    background-color: var(--blanco);
+    padding:1rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+
+}
+/*
+============================
+NAVEGACION
+===============================
+*/
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap: 2rem;
+    margin:0;
+    padding:0;
+    
+}
+.navbar a{
+    color:var(--Azul-oscuro);
+    transition: all 0.3s ease;
+}
+.navbar a:hover{
+    text-decoration:wavy underline;
+    color:var(--celeste);
+}
+
+.hero-section{
+    /*imagen de fondo*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../imagenes/azuria-principal.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    min-height:450px;
+    /*posicionar los textos*/
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:start;
+    padding:0 2rem ;
+ 
+}
+
+.hero-section h1 , 
+.hero-section p{
+    color: var(--blanco);
+    max-width: 600px;
+}
+
+.hero-section h1{
+    font-size:4rem;
+    margin-bottom:1rem;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    color:var(--Azul-oscuro);
+    width:100%;
+}
+.cards-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--celeste);
+}
+.card {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--blanco);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.75rem;
+    font-size:1rem;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--celeste);
+    color: var(--Azul-oscuro);
+    border-radius: 10px;
+    
+}
+
+
+/*=================================
+  LUGARES
+  =================================
+*/
+
+/*=================================
+  CIUDAD
+  =================================
+*/
+
+/*=================================
+  CONTACTO
+  =================================
+*/
+
+
+
+/*#################
+ FOOTER
+###################*/
+
+footer {
+    background-color: var(--blanco); 
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;                          
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;      
+    padding: 0;
+    margin: 0;
+}
+
+/* hace zoom en los iconos cuando pasas el cursor sobre ellos */
+footer img {
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.15);               
+}
+
