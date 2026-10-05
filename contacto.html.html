@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Azuria</title>
+
+    <meta name="description" content="Contactate con Azuria y compartí tus recomendaciones para mejorar la ciudad.">
+
+    <!-- Fuente Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html">
+        <img src="imagenes/logoAzuria.png" alt="Logo de Azuria" width="180">
+    </a>
+
+    <nav aria-label="Menú principal" class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="ciudad.html">Ciudad</a></li>
+            <li><a href="Lugares.html">Turismo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!--=================================
+        CONTACTO
+    =================================-->
+
+    <section id="contacto">
+
+        <div class="contacto-titulo">
+
+            <h1>Contacto</h1>
+
+            <p>
+                Nos interesa saber tu opinión sobre Azuria.
+                Podés enviarnos una recomendación, propuesta o comentario
+                para seguir mejorando nuestra ciudad.
+            </p>
+
+        </div>
+
+
+        <div class="contacto-contenedor">
+
+            <!-- Información de contacto -->
+
+            <article class="contacto-info">
+
+                <h2>Conocé más sobre Azuria</h2>
+
+                <p>
+                    Si tenés alguna recomendación para la ciudad,
+                    podés comunicarte con nosotros o completar el
+                    formulario.
+                </p>
+
+                <div class="contacto-dato">
+
+                    <div class="icono-contacto">
+                        @
+                    </div>
+
+                    <div>
+                        <h3>Email</h3>
+                        <p>contacto@azuria.com</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contacto-dato">
+
+                    <div class="icono-contacto">
+                        +
+                    </div>
+
+                    <div>
+                        <h3>Teléfono</h3>
+                        <p>0800-AZURIA</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contacto-dato">
+
+                    <div class="icono-contacto">
+                        A
+                    </div>
+
+                    <div>
+                        <h3>Ubicación</h3>
+                        <p>Ciudad de Azuria</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Formulario -->
+
+            <article class="contacto-formulario">
+
+                <h2>Enviá tu recomendación</h2>
+
+                <p class="formulario-introduccion">
+                    Completá los siguientes datos para enviarnos tu mensaje.
+                </p>
+
+                <form action="#" method="post">
+
+                    <div class="campo">
+
+                        <label for="nombre">Nombre completo</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Nombre completo"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">Correo electrónico</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="categoria">
+                            Categoría de la recomendación
+                        </label>
+
+                        <select name="categoria" id="categoria" required>
+
+                            <option value="" disabled selected>
+                                Seleccioná una categoría
+                            </option>
+
+                            <option value="turismo">Turismo</option>
+                            <option value="empleo">Empleo</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="otro">Otro</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <fieldset class="preferencia">
+
+                        <legend>¿Cómo preferís que te contactemos?</legend>
+
+                        <div class="opciones-radio">
+
+                            <label>
+                                <input type="radio" name="contacto" value="email" checked>
+                                Email
+                            </label>
+
+                            <label>
+                                <input type="radio" name="contacto" value="telefono">
+                                Teléfono
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <div class="campo">
+
+                        <label for="comentario">
+                            Tu recomendación
+                        </label>
+
+                        <textarea
+                            name="comentario"
+                            id="comentario"
+                            rows="6"
+                            maxlength="200"
+                            placeholder="Escribí tu recomendación aquí..."
+                            required
+                        ></textarea>
+
+                        <small>
+                            Máximo 200 caracteres.
+                        </small>
+
+                    </div>
+
+
+                    <div class="aceptacion">
+
+                        <label>
+                            <input type="checkbox" name="aceptar" required>
+                            Acepto el envío de mi recomendación.
+                        </label>
+
+                    </div>
+
+
+                    <div class="botones-formulario">
+
+                        <button type="submit" class="boton-contacto">
+                            Enviar comentario
+                        </button>
+
+                        <button type="reset" class="boton-limpiar">
+                            Limpiar
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!--#################
+ FOOTER
+###################-->
+
+<footer>
+
+    <nav aria-label="Redes sociales">
+
+        <ul>
+
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="imagenes/instagram.svg" alt="Instagram de Azuria" width="24">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="imagenes/facebook.svg" alt="Facebook de Azuria" width="24">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="imagenes/tiktok.svg" alt="TikTok de Azuria" width="24">
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <p>
+        <small>&copy; 2026 Sitio Oficial Ciudad Azuria</small>
+    </p>
+
+</footer>
+
+</body>
+</html>
