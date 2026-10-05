@@ -175,6 +175,70 @@ section h2{
   LUGARES
   =================================
 */
+#Turismo_Contenedor {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #87C9EA;
+    text-align: center;
+}
+
+.Turismo_Titulo_Principal {
+    margin:50px;
+    padding: 100px;
+    font-size: 30px;
+    background-color: #D9EAF2;
+    border-radius: 2%;
+}
+
+.Turismo_Articulos {
+    background-color: #BEDFEF;
+    width: 85%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.Turismo_Lugares {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.Turismo_Lugares img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Turismo_Lugares_1,
+.Turismo_Lugares_2,
+.Turismo_Lugares_3,
+.Turismo_Lugares_4,
+.Turismo_Lugares_5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.Turismo_Lugares_1 h2,
+.Turismo_Lugares_2 h2,
+.Turismo_Lugares_3 h2,
+.Turismo_Lugares_4 h2,
+.Turismo_Lugares_5 h2 {
+    color: #87C9EA;
+}
+
 
 /*=================================
   CIUDAD
