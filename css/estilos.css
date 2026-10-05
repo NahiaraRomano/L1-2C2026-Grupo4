@@ -176,10 +176,92 @@ section h2{
   =================================
 */
 
+
 /*=================================
-  CIUDAD
-  =================================
-*/
+CIUDAD*/
+
+:root{
+--blanco: #FFFFFF;
+--Azul-oscuro: #020120;
+--celeste: #3b7de0;
+--crema:#f5f5dc;
+}
+
+*{
+box-sizing: border-box;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background-color:#f5f5dc;
+color: var(--Azul-oscuro);
+}
+
+header{
+background-color: var(--Azul-oscuro);
+padding: 15px;
+text-align: center;
+}
+
+header img{
+max-width:250px;
+}
+
+.navbar ul{
+list-style:none;
+padding:0;
+}
+
+.navbar li{
+display:inline;
+margin:10px;
+}
+
+.navbar a{
+color: var(--blanco);
+text-decoration:none;
+}
+
+.navbar a:hover{
+color:var(--celeste);
+}
+
+main{
+width:100%;
+}
+
+section{
+background-color:var(--blanco);
+padding:20px;
+margin-bottom:25px;
+}
+
+h1,h2,h3{
+color:var(--Azul-oscuro);
+}
+
+img{
+max-width:100%;
+}
+
+video{
+max-width:100%;
+}
+
+table{
+width:100%;
+}
+
+th,td{
+padding: 10px;
+border: 1px var(--celeste);
+}
+
+  /*cierre de ciudad*/
+=================================
+
+
 
 /*=================================
   CONTACTO
