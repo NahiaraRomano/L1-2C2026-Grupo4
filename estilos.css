@@ -2,12 +2,12 @@
    VARIABLES
  =============================*/
 :root {
-  
+
     --blanco: #FFFFFF;
     --Azul-oscuro: #020120;
     --celeste:#afccf8;
     --crema:#f5f5dc;
-    
+
 }
 /*============================
     RESET
@@ -19,7 +19,7 @@
     padding: 0;
 }
 
-.body-index {
+body {
     background-color: var(--crema);
     color: var(--Azul-oscuro);
     font-size:16px;
@@ -58,38 +58,45 @@ HEADER
 */
 
 #logoAzuria{
-  display:flex;
-  justify-content:start;
-  width: 180px;
-  height:auto;
+    display:flex;
+    justify-content:start;
+    width: 180px;
+    height:auto;
 }
+
 header{
     background-color: var(--blanco);
     padding:1rem 2rem;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    
 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 /*
 ============================
 NAVEGACION
 ===============================
 */
 
-.navbar ul{
+.navbar  .navbar-nav{
     list-style:none;
     display:flex;
     gap: 2rem;
     margin:0;
     padding:0;
     
+
 }
+
 .navbar a{
     color:var(--Azul-oscuro);
     transition: all 0.3s ease;
 }
+
 .navbar a:hover{
     text-decoration:wavy underline;
     color:var(--celeste);
@@ -97,18 +104,27 @@ NAVEGACION
 
 .hero-section{
     /*imagen de fondo*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../imagenes/azuria-principal.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../imagenes/azuriaHero.png);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center;
     min-height:450px;
+    
+    position:relative;
+
     /*posicionar los textos*/
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:start;
     padding:0 2rem ;
- 
+
+}
+.hero-texto{
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
 }
 
 .hero-section h1 , 
@@ -121,12 +137,14 @@ NAVEGACION
     font-size:4rem;
     margin-bottom:1rem;
 }
+
 section h2{
     text-align: center;
     margin-bottom: 2rem;
     color:var(--Azul-oscuro);
     width:100%;
 }
+
 .cards-container {
     max-width: 1300px;
     margin: 0 auto;
@@ -136,6 +154,7 @@ section h2{
     padding: 2rem;
     background-color: var(--celeste);
 }
+
 .card {
     padding: 1.5rem;
     text-align: center;
@@ -167,7 +186,7 @@ section h2{
     background-color: var(--celeste);
     color: var(--Azul-oscuro);
     border-radius: 10px;
-    
+
 }
 
 
@@ -175,69 +194,6 @@ section h2{
   LUGARES
   =================================
 */
-#Turismo_Contenedor {
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #87C9EA;
-    text-align: center;
-}
-
-.Turismo_Titulo_Principal {
-    margin:50px;
-    padding: 100px;
-    font-size: 30px;
-    background-color: #D9EAF2;
-    border-radius: 2%;
-}
-
-.Turismo_Articulos {
-    background-color: #BEDFEF;
-    width: 85%;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.Turismo_Lugares {
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.Turismo_Lugares img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.Turismo_Lugares_1,
-.Turismo_Lugares_2,
-.Turismo_Lugares_3,
-.Turismo_Lugares_4,
-.Turismo_Lugares_5 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    box-sizing: border-box;
-}
-
-.Turismo_Lugares_1 h2,
-.Turismo_Lugares_2 h2,
-.Turismo_Lugares_3 h2,
-.Turismo_Lugares_4 h2,
-.Turismo_Lugares_5 h2 {
-    color: #87C9EA;
-}
 
 
 /*=================================
@@ -245,16 +201,300 @@ section h2{
   =================================
 */
 
+section{
+    background-color:var(--blanco);
+    padding:20px;
+    margin-bottom:25px;
+}
+
+h1,h2,h3{
+    color:var(--Azul-oscuro);
+}
+
+img{
+    max-width:100%;
+}
+
+video{
+    max-width:100%;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 10px;
+    border: 1px solid var(--celeste);
+}
+
+thead{
+    background-color: var(--Azul-oscuro);
+    color: var(--blanco);
+}
+
+tbody tr:nth-child(even){
+    background-color: #eef4fc;
+}
+
+
 /*=================================
   CONTACTO
   =================================
 */
 
+#contacto{
+    background-color: var(--crema);
+    padding: 3rem 2rem;
+}
+
+.contacto-titulo{
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.contacto-titulo h1{
+    margin-bottom: 1rem;
+}
+
+.contacto-titulo p{
+    color: var(--Azul-oscuro);
+}
+
+.contacto-contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+}
 
 
-/*#################
- FOOTER
-###################*/
+/*============================
+  INFORMACION DE CONTACTO
+==============================*/
+
+.contacto-info{
+    background-color: var(--Azul-oscuro);
+    color: var(--blanco);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.contacto-info h2{
+    color: var(--blanco);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contacto-info > p{
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+}
+
+.contacto-dato{
+    display:flex;
+    align-items:flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.contacto-dato:last-child{
+    border-bottom: none;
+}
+
+.contacto-dato h3{
+    color: var(--blanco);
+    font-size:1rem;
+    margin-bottom:0.2rem;
+}
+
+.contacto-dato p{
+    color: var(--blanco);
+    margin:0;
+}
+
+.icono-contacto{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:40px;
+    height:40px;
+    background-color:var(--celeste);
+    color:var(--Azul-oscuro);
+    border-radius:50%;
+    font-size:1.1rem;
+}
+
+
+/*============================
+  FORMULARIO
+==============================*/
+
+.contacto-formulario{
+    background-color:var(--blanco);
+    padding:2rem;
+    border-radius:20px;
+}
+
+.contacto-formulario h2{
+    text-align:left;
+    margin-bottom:0.5rem;
+}
+
+.formulario-introduccion{
+    color:#666;
+    margin-bottom:1.5rem;
+}
+
+.campo{
+    margin-bottom:1.2rem;
+}
+
+.campo label{
+    display:block;
+    margin-bottom:0.4rem;
+    font-weight:600;
+    color:var(--Azul-oscuro);
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+    width:100%;
+    padding:0.75rem 1rem;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-family:"Poppins", sans-serif;
+    font-size:0.95rem;
+    color:var(--Azul-oscuro);
+    background-color:var(--blanco);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+    outline:none;
+    border-color:var(--celeste);
+}
+
+.campo textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+.campo small{
+    display:block;
+    margin-top:0.3rem;
+    color:#666;
+    font-size:0.8rem;
+}
+
+
+/*============================
+  OPCIONES DE CONTACTO
+==============================*/
+
+.preferencia{
+    border:none;
+    padding:0;
+    margin-bottom:1.3rem;
+}
+
+.preferencia legend{
+    font-weight:600;
+    margin-bottom:0.6rem;
+    color:var(--Azul-oscuro);
+}
+
+.opciones-radio{
+    display:flex;
+    gap:2rem;
+}
+
+.opciones-radio label{
+    display:flex;
+    align-items:center;
+    gap:0.4rem;
+    cursor:pointer;
+}
+
+.opciones-radio input{
+    accent-color:var(--celeste);
+}
+
+
+/*============================
+  CHECKBOX
+==============================*/
+
+.aceptacion{
+    margin-bottom:1.3rem;
+}
+
+.aceptacion label{
+    display:flex;
+    align-items:flex-start;
+    gap:0.5rem;
+    font-size:0.85rem;
+    color:#666;
+    cursor:pointer;
+}
+
+.aceptacion input{
+    margin-top:0.3rem;
+    accent-color:var(--Azul-oscuro);
+}
+
+
+/*============================
+  BOTONES CONTACTO
+==============================*/
+
+.botones-formulario{
+    display:flex;
+    gap:1rem;
+}
+
+.boton-contacto{
+    border:none;
+    padding:0.75rem 1.5rem;
+    background-color:var(--Azul-oscuro);
+    color:var(--blanco);
+    border-radius:10px;
+    font-family:"Poppins", sans-serif;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.boton-contacto:hover{
+    background-color:var(--celeste);
+    color:var(--Azul-oscuro);
+}
+
+.boton-limpiar{
+    padding:0.75rem 1.5rem;
+    background-color:var(--blanco);
+    color:var(--Azul-oscuro);
+    border:1px solid var(--Azul-oscuro);
+    border-radius:10px;
+    font-family:"Poppins", sans-serif;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.boton-limpiar:hover{
+    background-color:var(--Azul-oscuro);
+    color:var(--blanco);
+}
+
+
+/*============================
+  FOOTER
+==============================*/
 
 footer {
     background-color: var(--blanco); 
@@ -275,7 +515,6 @@ footer nav ul {
     margin: 0;
 }
 
-/* hace zoom en los iconos cuando pasas el cursor sobre ellos */
 footer img {
     transition: transform 0.3s ease;
 }
@@ -284,3 +523,57 @@ footer img:hover {
     transform: scale(1.15);               
 }
 
+
+/*============================
+  DISEÑO RESPONSIVE
+==============================*/
+
+@media (max-width: 800px){
+
+    header{
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    .contacto-contenedor{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:1rem;
+    }
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .contacto-contenedor{
+        grid-template-columns:1fr;
+    }
+
+    .opciones-radio{
+        flex-direction:column;
+        gap:0.5rem;
+    }
+
+    .botones-formulario{
+        flex-direction:column;
+    }
+
+    .boton-contacto,
+    .boton-limpiar{
+        width:100%;
+    }
+
+}
+@media (max-width: 991px) {
+    .navbar .navbar-toggler {
+        display: block;
+    }
+}
