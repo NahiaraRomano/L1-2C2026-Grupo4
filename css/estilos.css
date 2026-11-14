@@ -277,10 +277,11 @@ section h2{
     --Azul-oscuro: #0a2540;
     --celeste: #38bdf8;
     --blanco: #ffffff;
+    --crema:#f5f5dc;
 }
 
 body {
-    background-color: #dceeff;
+    background-color: #38bdf8;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
@@ -391,6 +392,7 @@ th {
     gap: 15px;
     padding: 0;
 }
+
 
 /*=================================
   CONTACTO
