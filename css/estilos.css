@@ -123,7 +123,7 @@ header nav .navbar-nav {
     background-repeat:no-repeat;
     background-position: center;
     min-height:450px;
-    max-width: 1900px;
+    
     position:relative;
 
     /*posicionar los textos*/
@@ -214,7 +214,6 @@ section h2{
     align-items: center;
     gap: 30px;
     padding: 50px 20px;
-    max-width: 1800px;
 }
 
 .curiosidades h2 {
@@ -343,63 +342,49 @@ section h2{
     color: var(--Azul-oscuro);
 }
 
-
 /*=================================
   LUGARES
   =================================
 */
-*/
+/* RESETEO BÁSICO Y CONFIGURACIÓN GENERAL */
+
+/* 1. TÍTULO PRINCIPAL RESPONSIVE */
 .Turismo_Titulo_Principal {
     background-color: #5a4f55;
-    margin: 0;
-    padding: 15rem;
+    width: 100%;
+    padding: 4rem 1rem; /* Padding moderado en lugar de 15rem para que no quede gigante */
     display: flex;
-    flex-direction: column;
-    
+    justify-content: center;
+    align-items: center;
 }
+
 .Turismo_Titulo_Principal h2 {
     text-align: center;
-    color: white ;
-    font-size: 100px;
+    color: white;
+    font-size: clamp(2.5rem, 5vw, 5rem); /* Se adapta automáticamente según la pantalla */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.Turismo_Titulo_Principal h3 {
-    text-align: center;
-    color:rgb(117, 106, 106);
-    font-size: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-weight: 400;
+    margin: 0;
 }
 
-
+/* IMAGEN DE FONDO PRINCIPAL */
 .Turismo_Fondo_Principal {
     width: 100%;
-    height: 800px;
-
- }
-#Turismo_Contenedor {
-    padding: 2rem;
+    height: 400px; /* Altura controlada para que luzca bien */
 }
+
+.Turismo_Fondo_Principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. SECCIÓN CARRUSEL */
 .seccion-lugares-destacados {
     background-color: #7c7c65;
     width: 100%;
-    padding: 3rem 0;
-    overflow: hidden;
-}
-.seccion-lugares-destacados .card img {
-    width: 100%;       /* Ocupa todo el ancho de la tarjeta */
-    height: 180px;     /* Altura proporcional para que no queden tan altas */
-    object-fit: cover; /* Recorta los bordes limpiamente sin deformar la foto */
-}
-.carousel-item .row {
-    margin: 0;
-}
-
-#carouselMultiple {
-    max-width: 1100px;
-    margin: 0 auto;
+    overflow: hidden; /* Evita que las tarjetas sobresalgan y rompan la pantalla */
 }
 
 .seccion-lugares-destacados .card img {
@@ -407,196 +392,133 @@ section h2{
     object-fit: cover;
 }
 
+#carouselMultiple {
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
+/* 3. CONTENEDOR DE ARTÍCULOS TURÍSTICOS */
 .Turismo_Contenedor {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     background-color: #c4c4b0;
-    
+    padding: 2rem 1rem;
 }
+
 .Turismo_Articulos {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    background-color: #c4c4b0;
-    
-}
-.Turismo_Info {
-    flex: 1;
-    background-color: #f5f5dc;    
+    gap: 2rem; /* Espacio limpio entre cada tarjeta de artículo */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#Turismo_Costa_Azul {
+/* DISEÑO FLEXBOX 50/50 PARA CADA ARTÍCULO */
+.articulo-turismo {
     display: flex;
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-    
+    flex-direction: row; /* Imagen y texto lado a lado en pantallas grandes */
+    background-color: #f5f5dc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-#Turismo_Costa_Azul .Turismo_Imagen_1 {
-    background-image: url(../imagenes/Lugares_Imagenes/Costa_Azul.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-radius: 10px;
-    min-height: 500px;
+
+/* Hacemos que tanto la caja de imagen como la de texto ocupen el 50% por igual */
+.articulo-turismo .caja-imagen,
+.articulo-turismo .Turismo_Info {
     flex: 1;
+    min-width: 0; /* Evita que flexbox estire de más el contenido */
+}
+
+/* Estilo de la caja de información de texto */
+.Turismo_Info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Turismo_Articulos_Subtitulos {
-    margin-top:5%
+    margin-top: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: #5a4f55;
 }
+
 .Turismo_Info p {
-    margin: 1rem;
+    margin: 0.5rem 0 1rem 0;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-#Turismo_Distrito_Coral{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-
+.Turismo_Ubicacion {
+    font-weight: 600;
+    color: #7c7c65;
 }
-#Turismo_Distrito_Coral .Turismo_Imagen_2{
-    background-image: url(../imagenes/Lugares_Imagenes/Distrito_Coral.jpg);
-    height: 500px;
+
+/* IMÁGENES DINÁMICAS DE CADA ARTÍCULO */
+.Turismo_Imagen_1 { background-image: url('../imagenes/Lugares_Imagenes/Costa_Azul.jpg'); }
+.Turismo_Imagen_2 { background-image: url('../imagenes/Lugares_Imagenes/Distrito_Coral.jpg'); }
+.Turismo_Imagen_3 { background-image: url('../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg'); }
+.Turismo_Imagen_4 { background-image: url('../imagenes/Lugares_Imagenes/Manglares_Cristal.jpg'); }
+.Turismo_Imagen_5 { background-image: url('../imagenes/Lugares_Imagenes/Teatro_Flotante.jpg'); }
+
+/* Propiedades comunes para que las imágenes de fondo cubran bien su espacio */
+.caja-imagen {
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
     min-height: 350px;
-    flex: 1;
+}
 
-}
-#Turismo_Casco_Antiguo{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-}
-#Turismo_Casco_Antiguo .Turismo_Imagen_3{
-    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    min-height: 350px;
-    flex: 1;
-}
-#Turismo_Manglares_Cristal{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-}
-#Turismo_Manglares_Cristal .Turismo_Imagen_4{
+/* MEDIA QUERY PARA CELULARES Y TABLETS (Pantallas chicas) */
+@media (max-width: 768px) {
+    .articulo-turismo {
+        flex-direction: column !important; /* Se apilan: imagen arriba, texto abajo */
+    }
     
-    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    min-height: 350px;
-    flex: 1;
+    .caja-imagen {
+        min-height: 250px; /* Altura más cómoda para celulares */
+    }
 }
-#Turismo_Teatro_Flotante{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem;
-    justify-content: center;
-}
-#Turismo_Teatro_Flotante .Turismo_Imagen_5{
-    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    min-height: 500px;
-    flex: 1;
-}
-
 /*=================================
   CIUDAD
   =================================
 */
 
-
-/*Secciones*/
-section {
-    background-color: var(--blanco);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-    border-radius: 8px;
+section{
+    background-color:var(--blanco);
+    padding:20px;
+    margin-bottom:25px;
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
+h1,h2,h3{
+    color:var(--Azul-oscuro);
 }
 
-/*Espacios*/
-#atractivos div {
-    margin-top: 15px;
+img{
+    max-width:100%;
 }
 
-/*Tablas*/
-table {
-    width: 100%;
+video{
+    max-width:100%;
+}
+
+table{
+    width:100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
-th, td {
-    padding: 8px;
+th,td{
+    padding: 10px;
     border: 1px solid var(--celeste);
-    text-align: left;
 }
 
-th {
+thead{
     background-color: var(--Azul-oscuro);
     color: var(--blanco);
 }
 
-/*Navegación botones*/
-.navegacion-ciudad {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-/*Tarjetas de facultades*/
-.facultades-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-}
-
-.facultad-card {
-    background-color: #e6f2ff;
-    border: 1px solid var(--celeste);
-    padding: 15px;
-    flex: 1 1 200px;
-    text-align: center;
-    border-radius: 6px;
-}
-
-/*Pie de página*/
-.footer-principal {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.footer-lista {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
+tbody tr:nth-child(even){
+    background-color: #eef4fc;
 }
 
 
