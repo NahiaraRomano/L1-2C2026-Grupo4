@@ -123,7 +123,7 @@ header nav .navbar-nav {
     background-repeat:no-repeat;
     background-position: center;
     min-height:450px;
-    
+    max-width: 1900px;
     position:relative;
 
     /*posicionar los textos*/
@@ -214,6 +214,7 @@ section h2{
     align-items: center;
     gap: 30px;
     padding: 50px 20px;
+    max-width: 1800px;
 }
 
 .curiosidades h2 {
@@ -342,14 +343,16 @@ section h2{
     color: var(--Azul-oscuro);
 }
 
+
 /*=================================
   LUGARES
   =================================
 */
+*/
 .Turismo_Titulo_Principal {
     background-color: #5a4f55;
     margin: 0;
-    padding: 13rem;
+    padding: 15rem;
     display: flex;
     flex-direction: column;
     
@@ -373,7 +376,7 @@ section h2{
 
 .Turismo_Fondo_Principal {
     width: 100%;
-    height: 850px;
+    height: 800px;
 
  }
 #Turismo_Contenedor {
@@ -512,46 +515,88 @@ section h2{
     min-height: 500px;
     flex: 1;
 }
+
 /*=================================
   CIUDAD
   =================================
 */
 
-section{
-    background-color:var(--blanco);
-    padding:20px;
-    margin-bottom:25px;
+
+/*Secciones*/
+section {
+    background-color: var(--blanco);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
 }
 
-h1,h2,h3{
-    color:var(--Azul-oscuro);
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 
-img{
-    max-width:100%;
+/*Espacios*/
+#atractivos div {
+    margin-top: 15px;
 }
 
-video{
-    max-width:100%;
-}
-
-table{
-    width:100%;
+/*Tablas*/
+table {
+    width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
-th,td{
-    padding: 10px;
+th, td {
+    padding: 8px;
     border: 1px solid var(--celeste);
+    text-align: left;
 }
 
-thead{
+th {
     background-color: var(--Azul-oscuro);
     color: var(--blanco);
 }
 
-tbody tr:nth-child(even){
-    background-color: #eef4fc;
+/*Navegación botones*/
+.navegacion-ciudad {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/*Tarjetas de facultades*/
+.facultades-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.facultad-card {
+    background-color: #e6f2ff;
+    border: 1px solid var(--celeste);
+    padding: 15px;
+    flex: 1 1 200px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/*Pie de página*/
+.footer-principal {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
 }
 
 
