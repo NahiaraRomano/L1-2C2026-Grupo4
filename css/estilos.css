@@ -8,6 +8,8 @@
     --celeste:#afccf8;
     --crema:#f5f5dc;
 
+    
+
 }
 /*============================
     RESET
@@ -51,6 +53,7 @@ main {
     padding: 0;
 }
 
+
 /*
 ============================
 HEADER
@@ -71,7 +74,7 @@ header{
     align-items:center;
     justify-content:space-between;
 
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
@@ -115,7 +118,7 @@ header nav .navbar-nav {
 
 .hero-section{
     /*imagen de fondo*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../imagenes/azuriaHero.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../imagenes/img-herosection.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center;
@@ -200,6 +203,83 @@ section h2{
     border-radius: 10px;
 
 }
+/*=================================
+  CURIOSIDADES
+  =================================
+*/
+.curiosidades {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.curiosidades h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.preguntas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.pregunta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 450px;
+}
+
+.pregunta h3 {
+    margin: 0;
+}
+
+.pregunta-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+    background-color: #e8eeee;
+    color: #263b3b;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.pregunta-btn:hover {
+    background-color: #d5e2e2;
+}
+
+.pregunta-btn span {
+    font-size: 22px;
+}
+
+.respuesta {
+    display: none;
+    padding: 15px 20px;
+    background-color: #f4f7f7;
+    border-radius: 0 0 10px 10px;
+}
+
+.respuesta p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pregunta.activa .respuesta {
+    display: block;
+}
 
 /*
 =================================
@@ -230,7 +310,7 @@ section h2{
 .lugar-card img {
     display: block;
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -266,131 +346,212 @@ section h2{
   LUGARES
   =================================
 */
+.Turismo_Titulo_Principal {
+    background-color: #5a4f55;
+    margin: 0;
+    padding: 13rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.Turismo_Titulo_Principal h2 {
+    text-align: center;
+    color: white ;
+    font-size: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Turismo_Titulo_Principal h3 {
+    text-align: center;
+    color:rgb(117, 106, 106);
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
 
 
+.Turismo_Fondo_Principal {
+    width: 100%;
+    height: 850px;
+
+ }
+#Turismo_Contenedor {
+    padding: 2rem;
+}
+.seccion-lugares-destacados {
+    background-color: #7c7c65;
+    width: 100%;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+.seccion-lugares-destacados .card img {
+    width: 100%;       /* Ocupa todo el ancho de la tarjeta */
+    height: 180px;     /* Altura proporcional para que no queden tan altas */
+    object-fit: cover; /* Recorta los bordes limpiamente sin deformar la foto */
+}
+.carousel-item .row {
+    margin: 0;
+}
+
+#carouselMultiple {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.seccion-lugares-destacados .card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.Turismo_Contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #c4c4b0;
+    
+}
+.Turismo_Articulos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #c4c4b0;
+    
+}
+.Turismo_Info {
+    flex: 1;
+    background-color: #f5f5dc;    
+}
+
+#Turismo_Costa_Azul {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+    
+}
+#Turismo_Costa_Azul .Turismo_Imagen_1 {
+    background-image: url(../imagenes/Lugares_Imagenes/Costa_Azul.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    min-height: 500px;
+    flex: 1;
+}
+
+.Turismo_Articulos_Subtitulos {
+    margin-top:5%
+}
+.Turismo_Info p {
+    margin: 1rem;
+}
+
+
+#Turismo_Distrito_Coral{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+
+}
+#Turismo_Distrito_Coral .Turismo_Imagen_2{
+    background-image: url(../imagenes/Lugares_Imagenes/Distrito_Coral.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 350px;
+    flex: 1;
+
+}
+#Turismo_Casco_Antiguo{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+}
+#Turismo_Casco_Antiguo .Turismo_Imagen_3{
+    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 350px;
+    flex: 1;
+}
+#Turismo_Manglares_Cristal{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+}
+#Turismo_Manglares_Cristal .Turismo_Imagen_4{
+    
+    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 350px;
+    flex: 1;
+}
+#Turismo_Teatro_Flotante{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: center;
+}
+#Turismo_Teatro_Flotante .Turismo_Imagen_5{
+    background-image: url(../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    min-height: 500px;
+    flex: 1;
+}
 /*=================================
   CIUDAD
   =================================
 */
 
-:root {
-    --Azul-oscuro: #0a2540;
-    --celeste: #38bdf8;
-    --blanco: #ffffff;
-    --crema:#f5f5dc;
+section{
+    background-color:var(--blanco);
+    padding:20px;
+    margin-bottom:25px;
 }
 
-body {
-    background-color: #38bdf8;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 20px;
+h1,h2,h3{
+    color:var(--Azul-oscuro);
 }
 
-/*menu principal*/
-.header-principal {
-    background-color: var(--blanco);
-    padding: 15px;
-    margin-bottom: 20px;
+img{
+    max-width:100%;
 }
 
-.header-contenido {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+video{
+    max-width:100%;
 }
 
-.nav-lista-superior {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-lista-superior a {
-    text-decoration: none;
-    color: var(--Azul-oscuro);
-    font-weight: 500;
-}
-
-/*Secciones*/
-section {
-    background-color: var(--blanco);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1000px;
-    border-radius: 8px;
-}
-
-img, video {
-    max-width: 100%;
-    height: auto;
-}
-
-/*Espacios*/
-#atractivos div {
-    margin-top: 15px;
-}
-
-/*Tablas*/
-table {
-    width: 100%;
+table{
+    width:100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
-th, td {
-    padding: 8px;
+th,td{
+    padding: 10px;
     border: 1px solid var(--celeste);
-    text-align: left;
 }
 
-th {
+thead{
     background-color: var(--Azul-oscuro);
     color: var(--blanco);
 }
 
-/*Navegación botones*/
-.navegacion-ciudad {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-/*Tarjetas de facultades*/
-.facultades-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-}
-
-.facultad-card {
-    background-color: #e6f2ff;
-    border: 1px solid var(--celeste);
-    padding: 15px;
-    flex: 1 1 200px;
-    text-align: center;
-    border-radius: 6px;
-}
-
-/*Pie de página*/
-.footer-principal {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.footer-lista {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
+tbody tr:nth-child(even){
+    background-color: #eef4fc;
 }
 
 
