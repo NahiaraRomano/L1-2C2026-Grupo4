@@ -351,42 +351,54 @@ section h2{
   LUGARES 
 =================================*/
 
-.Turismo_Titulo_Principal {
-    background-color: #686265;
+
+
+
+
+.Turismo_Hero_Banner {
+    position: relative;
     width: 100%;
-    padding: 6rem 2em;
+    height: 700px; 
+    background-image: url('../imagenes/Lugares_Imagenes/Fondo_Principal_Azuria.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.90); 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.Turismo_Titulo_Principal h2 {
     text-align: center;
-    color: white;
-    font-size: clamp(3rem, 6vw, 5rem);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    padding: 0 1rem;
+}
+
+.Turismo_Hero_Contenido {
+    max-width: 900px;
+}
+
+.Turismo_Hero_Contenido h2 {
+    color: var(--blanco);
+    font-size: 4rem; 
     font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+.Turismo_Hero_Contenido p {
+    color: #f1f2e7;
+    font-size: 1.1rem;
     font-weight: 400;
-    margin: 0;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
 }
 
-.Turismo_Fondo_Principal {
-    width: 100%;
-    height: 1000px;
-}
 
-.Turismo_Fondo_Principal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-/* SECCIÓN CARRUSEL CON CLASES PROPIAS */
+
+/* SECCIÓN DE LUGARES DESTACADOS */
 .Turismo_Seccion_Lugares {
-    background-color: #D3D5B0; /* Fondo propio de tu sección */
+    background-color: #D3D5B0; 
     width: 100%;
-    padding: 3rem 0;
+    padding: 2rem 0;
     overflow: hidden;
 }
 
@@ -395,25 +407,61 @@ section h2{
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(2, 1, 32, 0.15);
-    
-}
-
+    background-color:#bdbf9e;
+}  
 .Turismo_Seccion_Lugares .Turismo_Card_Carrusel img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: 210px;
 }
 
 .Turismo_Carousel_Item_Row {
     margin: 0;
-    background-color: #B8B8A3;
+    padding: 1rem;
+    
 }
 
+.Turismo_card-body {
+    padding: 1rem;
+    text-align: center;
+    background-color:#7e7f69;
+    border-radius: 16px 16px 16px 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.Turismo_card-body:hover {
+    background-color: #545546;
+     text-decoration: none;
+    transform: scale(1.05);
+}
+.Turismo_card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f1f2e7;
+}
+
+
 #Turismo_Carousel_Multiple {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     background-color: #74745D;
+     border-radius: 16px;
+
 }
+
+/* MAPA DE AZURIA*/
+.Turismo_GoogleMaps {
+    width: 800px;
+    height: auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    background-color: grey;
+    padding: 1rem;
+}
+
+
+
+
 
 /* CONTENEDOR DE ARTÍCULOS */
 .Turismo_Contenedor {
@@ -457,7 +505,7 @@ section h2{
     margin-top: 0;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
-    color: var(--azul-oscuro);
+    color: var(--Azul-oscuro);
 }
 
 .Turismo_Info p {
@@ -469,17 +517,23 @@ section h2{
     color: var(--celeste);
 }
 
-/* IMÁGENES DE LOS ARTÍCULOS (Mostrando la parte izquierda con 'left center') */
+
 .Turismo_Imagen_1,
 .Turismo_Imagen_2,
 .Turismo_Imagen_3,
-.Turismo_Imagen_4,
-.Turismo_Imagen_5 {
+.Turismo_Imagen_4 {
     background-size: cover;
-    background-position: left center; /* Corta la derecha y prioriza la izquierda */
+    background-position: left center; 
     flex: 1;
     min-height: 380px;
 }
+.Turismo_Imagen_5 {
+    background-size: cover;
+    background-position: center; 
+    flex: 1;
+    min-height: 380px;
+}
+
 
 .Turismo_Imagen_1 { background-image: url('../imagenes/Lugares_Imagenes/Costa_Azul.jpg'); }
 .Turismo_Imagen_2 { background-image: url('../imagenes/Lugares_Imagenes/Distrito_Coral.jpg'); }
@@ -487,19 +541,7 @@ section h2{
 .Turismo_Imagen_4 { background-image: url('../imagenes/Lugares_Imagenes/Manglares_Cristal.jpg'); }
 .Turismo_Imagen_5 { background-image: url('../imagenes/Lugares_Imagenes/Teatro_Flotante.jpg'); }
 
-/* RESPONSIVE PARA CELULARES */
-@media (max-width: 768px) {
-    .Turismo_Articulos article {
-        flex-direction: column !important;
-    }
-    .Turismo_Imagen_1,
-    .Turismo_Imagen_2,
-    .Turismo_Imagen_3,
-    .Turismo_Imagen_4,
-    .Turismo_Imagen_5 {
-        min-height: 250px;
-    }
-}
+
 
 /*=================================
   CIUDAD
