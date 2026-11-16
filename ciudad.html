@@ -1,42 +1,28 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ciudad de Azuria | Información y Características</title>
-
-    <meta name="description" content="Conocé la ciudad de Azuria, sus características, atractivos turísticos, moneda y universidad.">
-
-    <!-- Fuente Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="css/estilos.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciudad de Azuria | Información y Características</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--CSS-->
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-
 <header>
+    <nav aria-label="Menú principal" class="navbar navbar-expand-lg navbar-light">
 
-    <nav aria-label="Menú principal" class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="imagenes/logoAzuria.png"
+             alt="logo de Azuria"
+             width="300"
+             id="logoAzuria">
 
-        <a class="navbar-brand" href="index.html">
-            <img src="imagenes/logoAzuria.png"
-                 alt="Logo de Azuria"
-                 width="300"
-                 id="logoAzuria">
-        </a>
-
-        <!-- Botón Hamburguesa -->
+        <!-- Boton Hamburguesa -->
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menuAzuria"
@@ -45,11 +31,9 @@
                 aria-label="Abrir menú">
 
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="menuAzuria">
-
             <ul class="navbar-nav">
 
                 <li class="nav-item">
@@ -57,7 +41,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="ciudad.html" aria-current="page">Ciudad</a>
+                    <a class="nav-link" href="ciudad.html">Ciudad</a>
                 </li>
 
                 <li class="nav-item">
@@ -69,364 +53,146 @@
                 </li>
 
             </ul>
-
         </div>
 
     </nav>
-
 </header>
 
-
 <main class="main-contenido">
-
-    <!-- NAVEGACIÓN INTERNA CON BOOTSTRAP -->
-
-    <nav class="navegacion-ciudad" aria-label="Navegación de Ciudad">
-
-        <a href="#ciudad" class="btn btn-primary boton-animado">Información</a>
-
-        <a href="#atractivos" class="btn btn-primary boton-animado">Atractivos</a>
-
-        <a href="#moneda" class="btn btn-primary boton-animado">Moneda</a>
-
-        <a href="#universidad" class="btn btn-primary boton-animado">Universidad</a>
-
-    </nav>
-
-
-    <!-- INFORMACIÓN DE LA CIUDAD -->
-
-    <section id="ciudad" class="section_ciudad">
-
-        <h1>Ciudad de Azuria</h1>
-
-        <img src="imagenes/Ciudad_Azuria.png"
-             alt="Ciudad de Azuria"
-             width="400"
-             loading="lazy">
-
-        <p>
-            Azuria es una ciudad moderna y culturalmente diversa, caracterizada
-            por su constante crecimiento y por la convivencia de diferentes
-            culturas y estilos de vida. Se destaca por sus numerosas instituciones
-            educativas, que ofrecen distintas oportunidades de formación para
-            sus habitantes, y por sus espacios verdes, plazas y parques, que
-            funcionan como lugares de encuentro y recreación.
-
-            La ciudad también posee una importante actividad comercial, con
-            negocios, centros comerciales y emprendimientos locales que
-            contribuyen al desarrollo económico. En el área de salud, cuenta
-            con hospitales, clínicas y centros de atención que brindan servicios
-            a la comunidad.
-
-            Además, Azuria conserva lugares históricos y espacios culturales
-            que permiten conocer su pasado y fortalecer su identidad. Su amplia
-            red de transporte público facilita la conexión entre los distintos
-            barrios y permite a los habitantes desplazarse de manera rápida
-            y accesible.
-
-            En conjunto, estos aspectos hacen de Azuria una ciudad dinámica,
-            inclusiva y en constante evolución.
-        </p>
-
-        <hr>
-
-        <h2>Datos sobre Azuria</h2>
-
-        <dl>
-
-            <dt><strong>Población</strong></dt>
-            <dd>1.000.000 habitantes</dd>
-
-            <dt><strong>Superficie</strong></dt>
-            <dd>450.000 km²</dd>
-
-            <dt><strong>Fundación</strong></dt>
-            <dd>11 de agosto de 1856</dd>
-
-            <dt><strong>Idioma</strong></dt>
-            <dd>Español</dd>
-
-        </dl>
-
-    </section>
-
-
-    <!-- ATRACTIVOS DE AZURIA -->
-
-    <section id="atractivos" class="section_ciudad">
-
-        <article>
-
-            <h2>Atractivos</h2>
-
-            <p>
-                Azuria es un destino ideal para quienes buscan conocer una ciudad
-                moderna, diversa y llena de oportunidades. Sus espacios verdes,
-                lugares históricos y propuestas culturales permiten disfrutar
-                de distintas experiencias.
-
-                Además, cuenta con una amplia actividad comercial, buenos
-                servicios y una red de transporte que facilita recorrer la ciudad.
-                Elegir Azuria es descubrir un lugar donde la cultura, la naturaleza
-                y la modernidad se encuentran.
-            </p>
-
-            <h3>Principales puntos de interés</h3>
-
-            <ul>
-
-                <li>
-                    <strong>El Jardín Botánico Central:</strong>
-                    Un extenso pulmón verde con especies autóctonas y senderos
-                    para caminatas recreativas.
-                </li>
-
-                <li>
-                    <strong>El Paseo de la Ribera:</strong>
-                    Una moderna costanera equipada con miradores panorámicos
-                    y espacios culturales al aire libre.
-                </li>
-
-                <li>
-                    <strong>El Centro Cívico:</strong>
-                    Espacio histórico que combina la arquitectura tradicional
-                    de la fundación con muestras de arte contemporáneo.
-                </li>
-
-            </ul>
-
-            <h3>Elegí Azuria</h3>
-
-            <div>
-
-                <video controls width="500" poster="imagenes/Elegí Azuria.png">
-
-                    <source src="imagenes/Video Elegí Azuria.mp4" type="video/mp4">
-
-                    Tu navegador no soporta video HTML5.
-
-                </video>
-
-            </div>
-
-        </article>
-
-    </section>
-
-
-    <!-- MONEDA -->
-
-    <section id="moneda" class="section_ciudad">
-
-        <article>
-
-            <h2>Moneda</h2>
-
-            <img src="imagenes/Dolar Estadounidense.png"
-                 alt="Moneda dólar utilizada en Azuria"
-                 width="200"
-                 loading="lazy">
-
-            <p>
-                El dólar es la moneda oficial de la ciudad y es utilizado
-                para todas las operaciones comerciales y financieras.
-                Los precios se expresan en dólares estadounidenses (USD),
-                desde los productos cotidianos hasta las propiedades y
-                servicios públicos.
-
-                Su estabilidad permite un intercambio fluido tanto en el
-                comercio minorista como en grandes inversiones corporativas
-                y servicios turísticos.
-            </p>
-
-            <ul>
-
-                <li>
-                    <strong>Moneda:</strong>
-                    Dólar estadounidense
-                </li>
-
-                <li>
-                    <strong>Código:</strong>
-                    USD
-                </li>
-
-                <li>
-                    <strong>Símbolo:</strong>
-                    $
-                </li>
-
-                <li>
-                    <strong>Medios de pago aceptados:</strong>
-                    Efectivo, tarjetas de débito/crédito internacionales
-                    y billeteras digitales.
-                </li>
-
-            </ul>
-
-        </article>
-
-    </section>
-
-
-    <!-- UNIVERSIDAD -->
-
-    <section id="universidad" class="section_ciudad">
-
-        <article>
-
-            <h2>Universidad Nacional</h2>
-
-            <p>
-                La Universidad Nacional de Azuria (UNA) es la principal
-                institución de educación superior de la ciudad de Azuria.
-                Fue fundada en 1948 con el objetivo de ofrecer educación
-                pública y formar profesionales en distintas áreas.
-
-                Es una universidad pública y nacional ubicada en la ciudad
-                de Azuria, cuenta con aproximadamente 32.000 estudiantes
-                y está conformada por 5 facultades.
-
-                Cuenta además con centros de investigación científica,
-                bibliotecas especializadas y programas de extensión universitaria.
-            </p>
-
-            <img src="imagenes/Universidad de Azuria (UNA).png"
-                 alt="Imagen de la Universidad de Azuria"
-                 width="400"
-                 loading="lazy">
-
-            <h3>Facultades</h3>
-
-            <ul class="facultades-flex">
-
-                <li class="facultad-card">Facultad de Medicina</li>
-
-                <li class="facultad-card">Facultad de Derecho</li>
-
-                <li class="facultad-card">Facultad de Ingeniería</li>
-
-                <li class="facultad-card">Facultad de Economía</li>
-
-                <li class="facultad-card">Facultad de Arquitectura y Diseño</li>
-
-            </ul>
-
-            <hr>
-
-            <h3>Pasos para visitar la Universidad</h3>
-
-            <ol>
-
-                <li>Registrarse previamente.</li>
-
-                <li>Consultar el día y horario disponible.</li>
-
-                <li>Presentarse en la Universidad.</li>
-
-            </ol>
-
-            <h3>Calendario</h3>
-
-            <p>
-                Recuerde que tanto para visitar como para inscribirse
-                primero se tiene que registrar.
-            </p>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>Actividad</th>
-                        <th>Día</th>
-                        <th>Horario</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Visita</td>
-                        <td>Jueves</td>
-                        <td>10:00 hasta 18:00</td>
-                    </tr>
-
-                    <tr>
-                        <td>Inscripción</td>
-                        <td>Viernes</td>
-                        <td>12:00 hasta 16:00</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </article>
-
-    </section>
-
+<!--nav con botones de Bootstrap-->
+<nav class="navegacion-ciudad" aria-label="Navegación de Ciudad">
+    <a href="#ciudad" class="btn btn-primary boton-animado">Información</a>
+    <a href="#atractivos" class="btn btn-primary boton-animado">Atractivos</a>
+    <a href="#moneda" class="btn btn-primary boton-animado">Moneda</a>
+    <a href="#universidad" class="btn btn-primary boton-animado">Universidad</a>
+</nav>
+
+<section id="ciudad" class="section_ciudad">
+<h1>Ciudad de Azuria</h1>
+    <img src="imagenes/Ciudad_Azuria.png" alt="Ciudad de Azuria" width="400" loading="lazy">
+<p>
+Azuria es una ciudad moderna y culturalmente diversa, caracterizada por su constante crecimiento
+y por la convivencia de diferentes culturas y estilos de vida. Se destaca por sus numerosas
+instituciones educativas, espacios verdes y una importante actividad comercial.
+</p>
+<hr>
+    <h2>Datos sobre Azuria</h2>
+<dl>
+    <dt><strong>Población</strong></dt>
+    <dd>1.000.000 habitantes</dd>
+    <dt><strong>Superficie</strong></dt>
+    <dd>450.000 km²</dd>
+    <dt><strong>Fundación</strong></dt>
+    <dd>11 de agosto de 1856</dd>
+    <dt><strong>Idioma</strong></dt>
+    <dd>Español</dd>
+</dl>
+</section>
+
+<!--seccion atractivos-->
+<section id="atractivos" class="section_ciudad">
+    <article>
+    <h2>Atractivos</h2>
+<p>
+Un destino ideal para conocer una ciudad moderna, diversa y llena de oportunidades,
+combinando cultura, naturaleza y modernidad a través de sus principales puntos de interés:
+</p>
+<ul>
+<li><strong>El Jardín Botánico Central:</strong> Un extenso pulmón verde con especies autóctonas y senderos para caminatas recreativas.</li>
+<li><strong>El Paseo de la Ribera:</strong> Una moderna costanera equipada con miradores panorámicos y espacios culturales al aire libre.</li>
+<li><strong>El Centro Cívico:</strong> Espacio histórico que combina la arquitectura tradicional de la fundación con muestras de arte contemporáneo.</li>
+</ul>
+    <div>
+        <video controls width="500" poster="imagenes/Elegí Azuria.png"><source src="imagenes/Video Elegí Azuria.mp4" type="video/mp4">Tu navegador no soporta video HTML5.</video>
+    </div>
+</article>
+</section>
+
+<!-- seccion moneda-->
+<section id="moneda" class="section_ciudad">
+<article>
+    <h2>Moneda</h2>
+<img src="imagenes/Dolar Estadounidense.png" alt="Moneda dólar utilizada en Azuria" width="200" loading="lazy">
+<p>
+El dólar es la moneda oficial de la ciudad y es utilizado para todas las operaciones
+comerciales y financieras (USD). Su estabilidad permite un intercambio fluido tanto en el 
+comercio minorista como en grandes inversiones corporativas y servicios turísticos.
+</p>
+<ul>
+<li><strong>Moneda:</strong> Dólar estadounidense</li>
+<li><strong>Código:</strong> USD</li>
+<li><strong>Símbolo:</strong> $</li>
+<li><strong>Medios de pago aceptados:</strong> Efectivo, tarjetas de débito/crédito internacionales y billeteras digitales.</li>
+</ul>
+</article>
+</section>
+<!--seccion universidas-->
+<section id="universidad" class="section_ciudad">
+<article>
+    <h2>Universidad Nacional</h2>
+<p>
+La Universidad Nacional de Azuria (UNA) es la principal institución de educación superior
+de la ciudad, fundada en 1948 con 5 facultades y 32.000 estudiantes. Cuenta además con centros 
+de investigación científica, bibliotecas especializadas y programas de extensión universitaria.
+</p>
+<img src="imagenes/Universidad de Azuria (UNA).png" alt="Imagen de la Universidad de Azuria" width="400" loading="lazy">
+    <h3>Facultades</h3>
+<ul class="facultades-flex">
+    <li class="facultad-card">Facultad de Medicina</li>
+    <li class="facultad-card">Facultad de Derecho</li>
+    <li class="facultad-card">Facultad de Ingeniería</li>
+    <li class="facultad-card">Facultad de Economía</li>
+    <li class="facultad-card">Facultad de Arquitectura y Diseño</li>
+    </ul>
+<hr>
+<h3>Pasos para visitar la Universidad</h3>
+<ol>
+<li>Registrarse previamente.</li>
+<li>Consultar el día y horario disponible.</li>
+<li>Presentarse en la Universidad.</li>
+</ol>
+<h3>Calendario</h3>
+<p>Recuerde que tanto para visitar como para inscribirse primero se tiene que registrar.</p>
+
+<table>
+<thead>
+<tr>
+    <th>Actividad</th>
+    <th>Día</th>
+    <th>Horario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Visita</td>
+    <td>Jueves</td>
+    <td>10:00 hasta 18:00</td>
+</tr>
+<tr>
+    <td>Inscripción</td>
+    <td>Viernes</td>
+    <td>12:00 hasta 16:00</td>
+    </tr>
+</tbody>
+</table>
+</article>
+</section>
 </main>
 
-
-<!-- FOOTER -->
-
 <footer class="footer-principal">
-
-    <div class="footer-contenido">
-
-        <nav aria-label="Menú del pie de página">
-
-            <ul class="footer-lista">
-
-                <li>
-                    <a href="https://www.instagram.com"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <img src="imagenes/instagram.svg"
-                             alt="Instagram de Azuria"
-                             width="24">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.facebook.com"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <img src="imagenes/facebook.svg"
-                             alt="Facebook de Azuria"
-                             width="24">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.tiktok.com"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <img src="imagenes/tiktok.svg"
-                             alt="TikTok de Azuria"
-                             width="24">
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <p>
-            <small>&copy; 2026 Sitio Oficial Ciudad Azuria</small>
-        </p>
-
-    </div>
-
+<div class="footer-contenido">
+    <nav aria-label="Menú del pie de página">
+    <ul class="footer-lista">
+    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/instagram.svg" alt="Instagram" width="24"></a></li>
+    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/facebook.svg" alt="Facebook" width="24"></a></li>
+    <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/tiktok.svg" alt="TikTok" width="24"></a></li>
+</ul>
+</nav>
+<p><small>&copy; 2026 Sitio Oficial Ciudad Azuria</small></p>
+</div>
 </footer>
 
-
-<!-- Bootstrap JavaScript -->
-
+<!--Bootstrap JavaScript-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
