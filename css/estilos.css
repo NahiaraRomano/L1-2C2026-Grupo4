@@ -4,9 +4,13 @@
 :root {
 
     --blanco: #FFFFFF;
-    --Azul-oscuro: #020120;
+    --azul-oscuro: #020120;
     --celeste:#afccf8;
     --crema:#f5f5dc;
+    --gris:#98e2e2;
+    --verde-oscuro: #263b3b;
+
+    
 
 }
 /*============================
@@ -21,12 +25,10 @@
 
 body {
     background-color: var(--crema);
-    color: var(--Azul-oscuro);
+    color: var(--azul-oscuro);
     font-size:16px;
     line-height:1.6;
     font-family: "poppins", sans-serif;
-    margin:0 ;
-    padding:0;
 
 }
 h1 {
@@ -50,6 +52,7 @@ main {
     margin: 0;
     padding: 0;
 }
+
 
 /*
 ============================
@@ -75,26 +78,37 @@ header{
     top: 0;
     z-index: 1000;
 }
-
+header nav{
+   width:100%;
+}
 /*
 ============================
 NAVEGACION
 ===============================
 */
 
-.navbar  .navbar-nav{
-    list-style:none;
-    display:flex;
-    gap: 2rem;
-    margin:0;
-    padding:0;
-    
+header nav.navbar {
+    display: flex;
+    width: 100%;
+}
 
+header nav .navbar-collapse {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+header nav .navbar-nav {
+    display: flex;
+    gap: 2rem;
+    margin: 0 0 0 auto;
+    padding: 0;
+    list-style: none;
 }
 
 .navbar a{
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
     transition: all 0.3s ease;
+    
 }
 
 .navbar a:hover{
@@ -104,12 +118,12 @@ NAVEGACION
 
 .hero-section{
     /*imagen de fondo*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../imagenes/azuriaHero.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../imagenes/img-herosection.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center;
     min-height:450px;
-    
+    max-width: 1900px;
     position:relative;
 
     /*posicionar los textos*/
@@ -141,12 +155,13 @@ NAVEGACION
 section h2{
     text-align: center;
     margin-bottom: 2rem;
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
     width:100%;
 }
 
 .cards-container {
-    max-width: 1300px;
+    width: 95%;
+    max-width: 1900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -179,63 +194,394 @@ section h2{
     line-height: 1.6;
 }
 
+
+
+/*
+=================================
+  LUGARES DESTACADOS INDEX
+=================================
+*/
+.lugares-destacados {
+    width: 95%;
+    max-width: 1900px;
+    margin: 0 auto 25px;
+    padding: 3rem 2rem;
+    background-color: var(--blanco);
+}
+
+.lugar-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--blanco);
+    border: 1px solid var(--celeste);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(2, 1, 32, 0.08);
+}
+
+
+
+.lugar-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lugar-info {
+    padding: 1.5rem;
+}
+
+.lugar-info h3 {
+    margin-bottom: 0.75rem;
+}
+
+.lugar-info p {
+    margin-bottom: 0;
+}
+
+.lugares-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.lugares-destacados .boton {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+.lugares-destacados .boton:hover {
+    background-color: var(--celeste);
+    color: var(--azul-oscuro);
+}
 .boton {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
     background-color: var(--celeste);
-    color: var(--Azul-oscuro);
+    color: var(--azul-oscuro);
     border-radius: 10px;
 
 }
+/*=================================
+  CURIOSIDADES
+  =================================
+*/
+.curiosidades {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px; 
+    margin:30px ;
+    background-color: var(--blanco);
+}
+
+.curiosidades h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.preguntas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.pregunta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 450px;
+}
+
+.pregunta h3 {
+    margin: 0;
+}
+
+.pregunta-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--gris);
+    color: var(--verde-oscuro);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+}
+
+.pregunta-btn:hover {
+    background-color: var(--crema);
+}
+
+.pregunta-btn span {
+    font-size: 22px;
+}
+
+.respuesta {
+    display: none;
+    padding: 15px 20px;
+    background-color:var(--crema);
+    border-radius: 0 0 10px 10px;
+}
+
+.respuesta p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.pregunta.activa .respuesta {
+    display: block;
+}
+
+
+
 
 
 /*=================================
-  LUGARES
-  =================================
-*/
+  LUGARES 
+=================================*/
 
+.Turismo_Titulo_Principal {
+    background-color: #686265;
+    width: 100%;
+    padding: 6rem 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Turismo_Titulo_Principal h2 {
+    text-align: center;
+    color: white;
+    font-size: clamp(3rem, 6vw, 5rem);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Turismo_Fondo_Principal {
+    width: 100%;
+    height: 1000px;
+}
+
+.Turismo_Fondo_Principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECCIÓN CARRUSEL CON CLASES PROPIAS */
+.Turismo_Seccion_Lugares {
+    background-color: #D3D5B0; /* Fondo propio de tu sección */
+    width: 100%;
+    padding: 3rem 0;
+    overflow: hidden;
+}
+
+.Turismo_Seccion_Lugares .Turismo_Card_Carrusel {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(2, 1, 32, 0.15);
+    
+}
+
+.Turismo_Seccion_Lugares .Turismo_Card_Carrusel img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.Turismo_Carousel_Item_Row {
+    margin: 0;
+    background-color: #B8B8A3;
+}
+
+#Turismo_Carousel_Multiple {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #74745D;
+}
+
+/* CONTENEDOR DE ARTÍCULOS */
+.Turismo_Contenedor {
+    display: flex;
+    max-width: 1900px;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--crema);
+    padding: 2rem 0;
+}
+
+.Turismo_Articulos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.Turismo_Articulos article {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(2, 1, 32, 0.08);
+}
+
+.Turismo_Info {
+    flex: 1;
+    background-color: var(--blanco);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Turismo_Articulos_Subtitulos {
+    margin-top: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--azul-oscuro);
+}
+
+.Turismo_Info p {
+    margin: 1rem 0;
+}
+
+.Turismo_Ubicacion {
+    font-weight: 600;
+    color: var(--celeste);
+}
+
+/* IMÁGENES DE LOS ARTÍCULOS (Mostrando la parte izquierda con 'left center') */
+.Turismo_Imagen_1,
+.Turismo_Imagen_2,
+.Turismo_Imagen_3,
+.Turismo_Imagen_4,
+.Turismo_Imagen_5 {
+    background-size: cover;
+    background-position: left center; /* Corta la derecha y prioriza la izquierda */
+    flex: 1;
+    min-height: 380px;
+}
+
+.Turismo_Imagen_1 { background-image: url('../imagenes/Lugares_Imagenes/Costa_Azul.jpg'); }
+.Turismo_Imagen_2 { background-image: url('../imagenes/Lugares_Imagenes/Distrito_Coral.jpg'); }
+.Turismo_Imagen_3 { background-image: url('../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg'); }
+.Turismo_Imagen_4 { background-image: url('../imagenes/Lugares_Imagenes/Manglares_Cristal.jpg'); }
+.Turismo_Imagen_5 { background-image: url('../imagenes/Lugares_Imagenes/Teatro_Flotante.jpg'); }
+
+/* RESPONSIVE PARA CELULARES */
+@media (max-width: 768px) {
+    .Turismo_Articulos article {
+        flex-direction: column !important;
+    }
+    .Turismo_Imagen_1,
+    .Turismo_Imagen_2,
+    .Turismo_Imagen_3,
+    .Turismo_Imagen_4,
+    .Turismo_Imagen_5 {
+        min-height: 250px;
+    }
+}
 
 /*=================================
   CIUDAD
   =================================
 */
 
-section{
-    background-color:var(--blanco);
-    padding:20px;
-    margin-bottom:25px;
+
+/*Secciones*/
+.section_ciudad{
+    background-color: var(--blanco);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
 }
 
-h1,h2,h3{
-    color:var(--Azul-oscuro);
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 
-img{
-    max-width:100%;
+/*Espacios*/
+#atractivos div {
+    margin-top: 15px;
 }
 
-video{
-    max-width:100%;
-}
-
-table{
-    width:100%;
+/*Tablas*/
+table {
+    width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
 }
 
-th,td{
-    padding: 10px;
+th, td {
+    padding: 8px;
     border: 1px solid var(--celeste);
+    text-align: left;
 }
 
-thead{
-    background-color: var(--Azul-oscuro);
+th {
+    background-color: var(--azul-oscuro);
     color: var(--blanco);
 }
 
-tbody tr:nth-child(even){
-    background-color: #eef4fc;
+/*Navegación botones*/
+.navegacion-ciudad {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/*Tarjetas de facultades*/
+.facultades-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.facultad-card {
+    background-color: #e6f2ff;
+    border: 1px solid var(--celeste);
+    padding: 15px;
+    flex: 1 1 200px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/*Pie de página*/
+.footer-principal {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
 }
 
 
@@ -260,7 +606,7 @@ tbody tr:nth-child(even){
 }
 
 .contacto-titulo p{
-    color: var(--Azul-oscuro);
+    color: var(--azul-oscuro);
 }
 
 .contacto-contenedor{
@@ -277,7 +623,7 @@ tbody tr:nth-child(even){
 ==============================*/
 
 .contacto-info{
-    background-color: var(--Azul-oscuro);
+    background-color: var(--azul-oscuro);
     color: var(--blanco);
     padding: 2rem;
     border-radius: 20px;
@@ -324,7 +670,7 @@ tbody tr:nth-child(even){
     min-width:40px;
     height:40px;
     background-color:var(--celeste);
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
     border-radius:50%;
     font-size:1.1rem;
 }
@@ -358,7 +704,7 @@ tbody tr:nth-child(even){
     display:block;
     margin-bottom:0.4rem;
     font-weight:600;
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
 }
 
 .campo input,
@@ -370,7 +716,7 @@ tbody tr:nth-child(even){
     border-radius:8px;
     font-family:"Poppins", sans-serif;
     font-size:0.95rem;
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
     background-color:var(--blanco);
 }
 
@@ -407,7 +753,7 @@ tbody tr:nth-child(even){
 .preferencia legend{
     font-weight:600;
     margin-bottom:0.6rem;
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
 }
 
 .opciones-radio{
@@ -446,7 +792,7 @@ tbody tr:nth-child(even){
 
 .aceptacion input{
     margin-top:0.3rem;
-    accent-color:var(--Azul-oscuro);
+    accent-color:var(--azul-oscuro);
 }
 
 
@@ -462,7 +808,7 @@ tbody tr:nth-child(even){
 .boton-contacto{
     border:none;
     padding:0.75rem 1.5rem;
-    background-color:var(--Azul-oscuro);
+    background-color:var(--azul-oscuro);
     color:var(--blanco);
     border-radius:10px;
     font-family:"Poppins", sans-serif;
@@ -472,14 +818,14 @@ tbody tr:nth-child(even){
 
 .boton-contacto:hover{
     background-color:var(--celeste);
-    color:var(--Azul-oscuro);
+    color:var(--azul-oscuro);
 }
 
 .boton-limpiar{
     padding:0.75rem 1.5rem;
     background-color:var(--blanco);
-    color:var(--Azul-oscuro);
-    border:1px solid var(--Azul-oscuro);
+    color:var(--azul-oscuro);
+    border:1px solid var(--azul-oscuro);
     border-radius:10px;
     font-family:"Poppins", sans-serif;
     cursor:pointer;
@@ -487,7 +833,7 @@ tbody tr:nth-child(even){
 }
 
 .boton-limpiar:hover{
-    background-color:var(--Azul-oscuro);
+    background-color:var(--azul-oscuro);
     color:var(--blanco);
 }
 
@@ -575,81 +921,5 @@ footer img:hover {
 @media (max-width: 991px) {
     .navbar .navbar-toggler {
         display: block;
-    }
-}
-
-/*=================================
-  CONTACTO - ENLACES
-=================================*/
-
-.contacto-info a {
-    color: var(--celeste);
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
-
-.contacto-info a:hover {
-    color: var(--blanco);
-}
-
-/* Icono WhatsApp */
-
-.contacto-info .bi-whatsapp,
-footer .bi-whatsapp {
-    font-size: 1.5rem;
-}
-
-/* Color verde del icono de WhatsApp */
-
-.icono-contacto .bi-whatsapp {
-    color: #25D366;
-}
-
-footer a {
-    color: var(--Azul-oscuro);
-    transition: transform 0.3s ease;
-}
-
-footer a:hover {
-    color: #25D366;
-    transform: scale(1.15);
-}
-
-/*=================================
-  FLEXBOX RESPONSIVE
-=================================*/
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 2rem;
-}
-
-.flex-item {
-    flex: 1 1 250px;
-    padding: 1.5rem;
-    background-color: var(--blanco);
-    border-radius: 15px;
-}
-
-/*=================================
-  RESPONSIVE CONTACTO
-=================================*/
-
-@media (max-width: 768px) {
-
-    .contacto-contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .contacto-info,
-    .contacto-formulario {
-        padding: 1.5rem;
-    }
-
-    .hero-texto {
-        left: 1rem;
-        right: 1rem;
     }
 }
