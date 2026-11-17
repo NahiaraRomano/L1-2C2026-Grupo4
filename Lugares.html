@@ -22,11 +22,10 @@
 <header>
     <nav aria-label="Menú principal" class="navbar navbar-expand-lg navbar-light">
 
-         <a class="navbar-brand" href="index.html">
         <img src="imagenes/logoAzuria.png"
-             alt="Azuria"
+             alt="logo de Azuria"
+             width="300"
              id="logoAzuria">
-         </a>
 
         <!-- Boton Hamburguesa -->
         <button class="navbar-toggler" type="button"
@@ -51,7 +50,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link activo" href="Lugares.html">Turismo</a>
+                    <a class="nav-link" href="Lugares.html">Turismo</a>
                 </li>
 
                 <li class="nav-item">
@@ -77,109 +76,108 @@
        </div>
 
 
-
-
+          <!-- Sección de Lugares Destacados -->
 
 
             <section class="Turismo_Seccion_Lugares">
-              <div class="container py-5">
-                
-                <div class="text-center mb-5">
-                  <span class="d-inline-block px-3 py-1 mb-2 rounded-pill text-uppercase fw-semibold" style="background-color: rgba(116, 116, 93, 0.5); color: #f1f2e7; font-size: 1rem; letter-spacing: 2px;">
-                    Recorrido Exclusivo
-                  </span>
-                  
-                  <h2 class="text-white m-0" style="font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
-                    LUGARES DESTACADOS
-                  </h2>
-            
-                  <div class="mx-auto mt-2" style="width: 70px; height: 3px; background-color: var(--celeste); border-radius: 2px;"></div>
-                </div>
-            
-                <div id="Turismo_Carousel_Multiple" class="carousel slide pb-3" data-bs-ride="carousel">
-                  
-                  <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                      <div class="row g-4 justify-content-center Turismo_Carousel_Item_Row">
-                        
-                        <div class="col-md-4">
-                          <div class="card h-100 Turismo_Card_Carrusel">
-                            <img src="imagenes/Lugares_Imagenes/Costa_Azul.jpg" alt="Costa Azul">
-                            <a href="#Turismo_Costa_Azul" class="Turismo_Card_Link">
-                              <div class="Turismo_card-body py-3">
-                                <h5 class="Turismo_card-title">Costa Azul</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                     
-                        <div class="col-md-4">
-                          <div class="card h-100 Turismo_Card_Carrusel">
-                            <img src="imagenes/Lugares_Imagenes/Distrito_Coral.jpg" alt="Distrito Coral">
-                            <a href="#Turismo_Distrito_Coral" class="Turismo_Card_Link">
-                              <div class="Turismo_card-body py-3">
-                                <h5 class="Turismo_card-title">Distrito Coral</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-            
-                        <div class="col-md-4">
-                          <div class="card h-100 Turismo_Card_Carrusel">
-                            <img src="imagenes/Lugares_Imagenes/Casco_Antiguo.jpg" alt="Casco Antiguo">
-                            <a href="#Turismo_Casco_Antiguo" class="Turismo_Card_Link">
-                              <div class="Turismo_card-body py-3">
-                                <h5 class="Turismo_card-title">Casco Antiguo</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-            
-                      </div>
-                    </div>
-            
-                    <!-- GRUPO 2 (2 Tarjetas centradas) -->
-                    <div class="carousel-item">
-                      <div class="row g-4 justify-content-center Turismo_Carousel_Item_Row">
-                        
-                        <div class="col-md-4">
-                          <div class="card h-100 Turismo_Card_Carrusel">
-                            <img src="imagenes/Lugares_Imagenes/Manglares_Cristal.jpg" alt="Manglares Cristal">
-                            <a href="#Turismo_Manglares_Cristal" class="Turismo_Card_Link">
-                              <div class="Turismo_card-body py-3">
-                                <h5 class="Turismo_card-title">Manglares Cristal</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-            
-                        <div class="col-md-4">
-                          <div class="card h-100 Turismo_Card_Carrusel">
-                            <img src="imagenes/Lugares_Imagenes/Teatro_Flotante.jpg" alt="Teatro Flotante">
-                            <a href="#Turismo_Teatro_Flotante" class="Turismo_Card_Link">
-                              <div class="Turismo_card-body py-3">
-                                <h5 class="Turismo_card-title">Teatro Flotante</h5>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-            
-                      </div>
-                    </div>
-            
-                  </div>
-            
-                  <!-- Indicadores minimalistas abajo -->
-                  <div class="carousel-indicators position-static mt-4 mb-0">
-                    <button type="button" data-bs-target="#Turismo_Carousel_Multiple" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Grupo 1" style="background-color: #fff; width: 30px; height: 6px; border-radius: 2px;"></button>
-                    <button type="button" data-bs-target="#Turismo_Carousel_Multiple" data-bs-slide-to="1" aria-label="Grupo 2" style="background-color: #fff; width: 30px; height: 6px; border-radius: 2px;"></button>
-                  </div>
-            
-                </div>
-              </div>
-            </section>
+  <div class="container py-5">
+    
+    <div class="text-center mb-5">
+    
+      <span class="Turismo_Badge">
+        Recorrido Exclusivo
+      </span>
+      
 
+
+      <h2 class="text-white m-0 Turismo_Titulo_Seccion">
+        LUGARES DESTACADOS
+      </h2>
+ 
+      <div class="mx-auto mt-2 Turismo_Linea_Divisoria"></div>
+    </div>
+ 
+    <div id="Turismo_Carousel_Multiple" class="carousel slide pb-3" data-bs-ride="carousel">
+      
+      <div class="carousel-inner">
+         
+        <div class="carousel-item active">
+          <div class="row g-4 justify-content-center Turismo_Carousel_Item_Row">
+            
+            <div class="col-md-4">
+              <div class="card h-100 Turismo_Card_Carrusel">
+                <img src="imagenes/Lugares_Imagenes/Costa_Azul.jpg" alt="Costa Azul">
+                <a href="#Turismo_Costa_Azul" class="Turismo_Card_Link">
+                  <div class="Turismo_card-body py-3">
+                    <h5 class="Turismo_card-title">Costa Azul</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+         
+            <div class="col-md-4">
+              <div class="card h-100 Turismo_Card_Carrusel">
+                <img src="imagenes/Lugares_Imagenes/Distrito_Coral.jpg" alt="Distrito Coral">
+                <a href="#Turismo_Distrito_Coral" class="Turismo_Card_Link">
+                  <div class="Turismo_card-body py-3">
+                    <h5 class="Turismo_card-title">Distrito Coral</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+ 
+            <div class="col-md-4">
+              <div class="card h-100 Turismo_Card_Carrusel">
+                <img src="imagenes/Lugares_Imagenes/Casco_Antiguo.jpg" alt="Casco Antiguo">
+                <a href="#Turismo_Casco_Antiguo" class="Turismo_Card_Link">
+                  <div class="Turismo_card-body py-3">
+                    <h5 class="Turismo_card-title">Casco Antiguo</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+ 
+        <div class="carousel-item">
+          <div class="row g-4 justify-content-center Turismo_Carousel_Item_Row">
+            
+            <div class="col-md-4">
+              <div class="card h-100 Turismo_Card_Carrusel">
+                <img src="imagenes/Lugares_Imagenes/Manglares_Cristal.jpg" alt="Manglares Cristal">
+                <a href="#Turismo_Manglares_Cristal" class="Turismo_Card_Link">
+                  <div class="Turismo_card-body py-3">
+                    <h5 class="Turismo_card-title">Manglares Cristal</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+ 
+            <div class="col-md-4">
+              <div class="card h-100 Turismo_Card_Carrusel">
+                <img src="imagenes/Lugares_Imagenes/Teatro_Flotante.jpg" alt="Teatro Flotante">
+                <a href="#Turismo_Teatro_Flotante" class="Turismo_Card_Link">
+                  <div class="Turismo_card-body py-3">
+                    <h5 class="Turismo_card-title">Teatro Flotante</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <div class="carousel-indicators position-static mt-4 mb-0">
+        <button type="button" data-bs-target="#Turismo_Carousel_Multiple" data-bs-slide-to="0" class="active Turismo_Indicador" aria-current="true" aria-label="Grupo 1"></button>
+        <button type="button" data-bs-target="#Turismo_Carousel_Multiple" data-bs-slide-to="1" class="Turismo_Indicador" aria-label="Grupo 2"></button>
+      </div>
+ 
+    </div>
+  </div>
+</section>
   
         <div class="Turismo_GoogleMaps">
           <img src="imagenes/Lugares_Imagenes/Mapa_Azuria.jpg" alt="Mapa de Azuria" class="mapaAzuria">
@@ -311,8 +309,18 @@
         <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" ><img src="imagenes/instagram.svg" alt="Instagram de Azuria" width="24"></a></li>
         <li><a href="https://www.Facebook.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/facebook.svg" alt="Facebook de Azuria" width="24"></a></li>
         <li><a href="https://www.Tiktok.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/tiktok.svg" alt="TikTok de Azuria" width="24"></a></li>
-       </ul>      
-            
+      
+      </ul>      
+            </ul>      
+     <li>
+    <a href="https://wa.me/5491149407247"
+       target="_blank"
+       rel="noopener noreferrer">
+        <img src="whatsapp.svg"
+             alt="WhatsApp de Azuria"
+             width="24">
+    </a> </li>
+    </ul>  
      </nav>
         <p><small>&copy; 2026 Sitio Oficial Ciudad Azuria</small></p>   
     </footer>
