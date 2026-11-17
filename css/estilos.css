@@ -362,6 +362,7 @@ section h2{
 
 
 
+
 .Turismo_Hero_Banner {
     position: relative;
     width: 100%;
@@ -408,6 +409,44 @@ section h2{
     padding: 2rem 0;
     overflow: hidden;
 }
+.Turismo_Badge {
+    
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: rgba(116, 116, 93, 0.5);
+    color: #f1f2e7;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.Turismo_Titulo_Seccion {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Turismo_Linea_Divisoria {
+    width: 70px;
+    height: 3px;
+    background-color: var(--celeste);
+    border-radius: 2px;
+}
+
+.Turismo_Indicador {
+    background-color: #fff;
+    width: 30px;
+    height: 6px;
+    border-radius: 2px;
+    border: none;
+}
 
 .Turismo_Seccion_Lugares .Turismo_Card_Carrusel {
     border: none;
@@ -420,6 +459,7 @@ section h2{
     width: 100%;
     height: 210px;
 }
+
 
 .Turismo_Carousel_Item_Row {
     margin: 0;
@@ -547,7 +587,6 @@ section h2{
 .Turismo_Imagen_3 { background-image: url('../imagenes/Lugares_Imagenes/Casco_Antiguo.jpg'); }
 .Turismo_Imagen_4 { background-image: url('../imagenes/Lugares_Imagenes/Manglares_Cristal.jpg'); }
 .Turismo_Imagen_5 { background-image: url('../imagenes/Lugares_Imagenes/Teatro_Flotante.jpg'); }
-
 
 
 /*=================================
