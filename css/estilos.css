@@ -115,6 +115,13 @@ header nav .navbar-nav {
     text-decoration:wavy underline;
     color:var(--celeste);
 }
+.activo{
+   
+    text-decoration: wavy underline;
+    text-decoration-color: var(--celeste);
+    color: var(--celeste)!important;
+    display: block;
+}
 
 .hero-section{
     /*imagen de fondo*/
